@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+
+    <h2>Add New Student</h2>
+
+    <form id="studentForm">
+
+        <input type="text" name="roll_no"
+        placeholder="Roll Number" required>
+
+        <input type="text" name="name"
+        placeholder="Student Name" required>
+
+        <p>Gender:</p>
+
+        <label>
+            <input type="radio" name="gender"
+            value="Male" required> Male
+        </label>
+
+        <label>
+            <input type="radio" name="gender"
+            value="Female"> Female
+        </label>
+
+        <p>Department:</p>
+
+        <select name="department" required>
+            <option value="">Select Department</option>
+            <option value="CST">CST</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="ME">ME</option>
+        </select>
+
+        <input type="number" name="marks"
+        placeholder="Marks" min="0" max="100" required>
+
+        <input type="hidden" name="source"
+        value="student_form">
+
+        <button type="submit">Add Student</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Student Records</h2>
+
+    <input type="text" id="search"
+    placeholder="Search students...">
+
+    <table>
+        <thead>
+            <tr>
+                <th data-sort="roll_no">Roll No</th>
+                <th data-sort="name">Name</th>
+                <th data-sort="gender">Gender</th>
+                <th data-sort="department">Department</th>
+                <th data-sort="marks">Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable"></tbody>
+    </table>
+
+    <h2>Statistics</h2>
+
+    <div id="statistics"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
